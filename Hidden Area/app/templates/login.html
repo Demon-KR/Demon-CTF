@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    {% if session['username'] %}
+        <p> Already Log in</p>
+    {% else %}
+    <center>
+    <div class="wrap">
+        <div class="login">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+            <div class="login_id">
+                
+                <input type="username" name="username" placeholder="ID">
+            </div>
+            <div class="login_pw">
+                
+                <input type="password" name="password" placeholder="Password">
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="submit">
+            </div>
+        </form>
+        </div>
+    </div>
+</center>
+{% endif %}
+</body>
+</html>
+
+<!-- Lollies / test -->
+<!-- Halpy / Halpy1234-->
+<!-- Colida / Colida1234-->
