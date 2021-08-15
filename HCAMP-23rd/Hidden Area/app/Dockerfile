@@ -46,9 +46,13 @@ CMD ["/bin/sh", "echo 'init done'"]
 CMD python3 load.py
 CMD ["/bin/sh", "echo 'load done'"]
 # execute 
+<<<<<<< HEAD
 # mysql error
 # Still not solve it
 # MySQLdb._exceptions.OperationalError: (2002, "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)")
 
 CMD python3 app.py
 
+=======
+CMD python3 app.py
+>>>>>>> 8babdb0fd556d566c5b50bdf0cbd7e46c6ae9a63
