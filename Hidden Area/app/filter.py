@@ -1,1 +1,0 @@
-blackbox = ["select","=","-","or","like","|"]
