@@ -1,4 +1,4 @@
-**제 23회 Hacking camp CTF WEB/REV Hidden Area Write up** 
+**제 23회 Hacking camp CTF WEB/CRYPTO Hidden Area Write up** 
 
 <span style="color:green">해당 문제는 Docker mysql 연동 과정중 이슈로 인해 Docker 파일을 제외한 풀코드를 제공합니다. </span>
 
