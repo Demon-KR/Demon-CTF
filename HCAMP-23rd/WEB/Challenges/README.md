@@ -8,19 +8,19 @@
 
 2. BABYJS
 
-    [Go Repository](https://www.naver.com)
+    [Go Repository](https://github.com/Demon-KR/Demon-CTF/tree/main/HCAMP-23rd/WEB/Challenges/BABYJS)
 
 3. File Manager
 
-    [Go Repository](https://www.naver.com)
+    [Go Repository](https://github.com/Demon-KR/Demon-CTF/tree/main/HCAMP-23rd/WEB/Challenges/File-Manager)
 
 4. Top Secret
 
-    [Go Repository](https://www.naver.com)
+    [Go Repository](https://github.com/Demon-KR/Demon-CTF/tree/main/HCAMP-23rd/WEB/Challenges/Top-Secret)
 
 5. World Wide Web
 
-    [Go Repository](https://www.naver.com)
+    [Go Repository](https://github.com/Demon-KR/Demon-CTF/tree/main/HCAMP-23rd/WEB/Challenges/World-Wide-Web)
 
 ---
 
