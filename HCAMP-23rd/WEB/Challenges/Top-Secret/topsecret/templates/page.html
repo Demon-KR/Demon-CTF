@@ -1,0 +1,29 @@
+{% extends 'layout/page_layout.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<center>
+  <hr>
+  <h5> Top Secret </h5>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/page">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/page/myinfo">Mypage</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/page/logout">Logout</a>
+    </li>
+  </ul>
+  {% if FLAG %}
+  <hr>
+  <strong> great!! flag is {{ FLAG }} </strong>
+  {% endif %}
+  <hr>
+  <img src="/static/images/hcamp.png" width="300" height="300"/><br><br>
+  <code> hacked by hackingcamp@hackingcamp.org </code> 
+</center>
+{% endblock %}

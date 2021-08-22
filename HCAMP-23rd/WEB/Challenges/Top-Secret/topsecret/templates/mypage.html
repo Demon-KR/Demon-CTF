@@ -1,0 +1,38 @@
+{% extends 'layout/page_layout.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<center>
+  <hr>
+  <h5> Top Secret </h5>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/page">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/page/myinfo">Mypage</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/page/logout">Logout</a>
+    </li>
+  </ul>
+  <hr>
+  <div class="col-md-6">
+  <div class="card">
+    <div class="card-header"> Change Password </div>
+    <div class="card-body">
+      <form action="", method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <input type="password" name="new_pass" class="form-control form-control-sm" placeholder="New Password" required><br>
+        <input type="password" name="repeat_pass" class="form-control form-control-sm" placeholder="Repeat Password" required><br>
+        <button type="submit" class="btn btn-outline-success btn-sm">Submit</button>
+    </div>
+  </div>
+  </div>
+  <hr>
+  <img src="/static/images/hcamp.png" width="300" height="300"/><br><br>
+  <code> hacked by hackingcamp@hackingcamp.org </code> 
+</center>
+{% endblock %}

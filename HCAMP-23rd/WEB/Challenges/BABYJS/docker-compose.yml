@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  babyjs:
+    build: ./
+    container_name: babyjs_web
+    working_dir: /app
+    ports:
+      - 40082:3000
+    networks:
+      babyjs-web:
+        ipv4_address: 172.8.0.2
+networks:
+  babyjs-web:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.8.0.0/24

@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  www-web:
+    build: ./image
+    container_name: www-web
+    depends_on:
+      - www-db
+    volumes:
+      - "./src:/var/www/html"
+    ports:
+      - 60698:80
+    networks:
+      www-web:
+        ipv4_address: 172.10.0.2
+  
+  www-db:
+    image: mysql:5.7
+    container_name: www-db
+    environment:
+      MYSQL_ROOT_PASSWORD: "rootpass"
+      MYSQL_DATABASE: "wwwweb"
+    volumes:
+      - "./env/:/docker-entrypoint-initdb.d/"
+    ports:
+      - 3910:3910
+    networks:
+      www-web:
+        ipv4_address: 172.10.0.3
+
+networks:
+  www-web:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.10.0.0/24

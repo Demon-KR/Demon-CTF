@@ -1,0 +1,14 @@
+{
+    "name": "babyjs",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+      "start": "node ./conf/www"
+    },
+    "dependencies": {
+      "express": "^4.17.1",
+      "pug": "^3.0.2",
+      "vm": "^0.1.0"
+    }
+  }
+  

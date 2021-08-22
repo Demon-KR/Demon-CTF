@@ -1,0 +1,8 @@
+Flask
+flask-sqlalchemy
+flask-migrate
+flask_wtf
+cryptography
+sqlalchemy-utils
+python-decouple
+pymysql

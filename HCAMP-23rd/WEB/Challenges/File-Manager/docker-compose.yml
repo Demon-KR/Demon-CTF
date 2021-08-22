@@ -1,0 +1,39 @@
+version: '3.7'
+services:
+  web:
+    container_name: file_manager_web
+    image: nginx:latest
+    depends_on:
+      - app
+    volumes:
+      - "./src:/var/www/html"
+      - "./conf/nginx.conf:/etc/nginx/conf.d/default.conf"
+    ports:
+      - "39123:80"
+    networks:
+      hcamp23_chall02:
+        ipv4_address: 172.9.0.2
+  
+  app:
+    container_name: file_manager_app
+    image: php:7.1-fpm
+    ports:
+      - "9000:9000"
+    volumes:
+      - "./src:/var/www/html"
+      - "./flag:/tmp/flag"
+    environment:
+      PMA_HOST: db
+      PMA_USERE: chall02
+      PMA_PASSWORD: hcamp23@@file_manager_app!
+    
+    networks:
+      hcamp23_chall02:
+        ipv4_address: 172.9.0.4
+
+networks:
+  hcamp23_chall02:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.9.0.0/24

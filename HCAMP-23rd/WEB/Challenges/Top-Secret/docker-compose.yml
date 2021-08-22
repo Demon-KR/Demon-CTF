@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  topsecret:
+    build: .
+    container_name: topsecret_web
+    depends_on:
+      - db
+    working_dir: /app
+    ports:
+      - 56520:80
+    networks:
+      topsecret:
+        ipv4_address: 172.7.0.2
+  
+  db:
+    image: mysql:8.0.26
+    container_name: topsecret_db
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_ROOT_PASSWORD: "rootpass"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "userpass"
+      MYSQL_DATABASE: "hcamp23_topsecret"
+    ports:
+      - 3820:3820
+    networks:
+      topsecret:
+        ipv4_address: 172.7.0.4
+
+networks:
+  topsecret:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.7.0.0/24

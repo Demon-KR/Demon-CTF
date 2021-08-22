@@ -1,0 +1,44 @@
+{% extends 'layout/login_layout.html' %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div id="wrapper">
+    <div id="table">
+        <a class="active">Sign in</a>
+        <a href="/register" class="">Sign Up</a>
+    </div>
+    {% if err %}
+        {{ err }}
+    {% endif %}
+    <div id="signin">
+        <form method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" autofocus required>
+            </div>
+            <div class="form-group">
+                <label for="pass">Password</label>
+                <input type="password" id="password" name="password" required>
+                <span id="showpwd" class="fa fa-eye-slash"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Sign in">
+            </div>
+        </form>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script >
+$(document).ready(function () {
+$("#showpwd").on("click", function () {
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    $($(this).siblings()[1]).attr("type", function (index, attr) {
+        return attr == "password" ? "text" : "password"
+    });
+});
+})
+</script>
+{% endblock %}

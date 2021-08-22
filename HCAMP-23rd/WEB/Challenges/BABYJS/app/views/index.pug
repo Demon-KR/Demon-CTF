@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    center
+    h5= title
+    p Hello BABYJS~
+    hr
+    form(action='/', method='get')
+        input(type='text', name='code', placeholder="Code")
+        input(type="submit", value="submit")
+    hr
+    h5 Result
+    msg #{msg}

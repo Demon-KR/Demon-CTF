@@ -1,0 +1,8 @@
+.DS_Store
+.dccache
+env
+.env
+__pycache__/
+node_modules
+package-lock.json
+.dccache
