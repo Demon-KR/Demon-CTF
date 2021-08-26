@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Bot..</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel='stylesheet' href='/static/css/custom_alert.css'>
+	<script src='/static/js/custom_alert.js'></script>
+
+	<style>	
+	table {
+		margin : auto;
+		width : 56%;
+		margin-top : 18%;
+		margin-bottom : 18%;
+		margin-left : 23%;
+	}
+
+	#detect {
+		font-size:36px;
+		float : left;
+	}
+	</style>
+</head>
+<body>
+	    	<table>
+	    	<tr>
+	    	<td>
+	    	<div id="robot">
+	    		<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuIfP0vhhw0NL9pLYearxT4WXg5PgZR--zsQ&usqp=CAU" width="300">
+	    	</div></td>
+	    	<td>
+		<div id="detect">
+		<b>검사중입니다. &nbsp;&nbsp;잠시만 기다려 주십시오..</b></div></td></tr></table>
+
+		<script>
+			setTimeout(
+				function() {
+					fetch('/api/bot_check').then(r=>r.json()).then(function(resp) {
+						alert(resp.result, {title: 'Detected Result', color: '#3a3'});
+						setTimeout(
+							function() { window.location.href = '/'; },
+							3000
+						)
+					})
+				}, 1000
+			)
+			
+		</script>
+</body>
+</html>

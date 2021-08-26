@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+
+body {
+  background: linear-gradient(-135deg, #245e5b, #366e8f) fixed;
+  font-family: 'Roboto', sans-serif;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+/*  top and botton margin - "Admin Login" word part */
+.login-header{
+    margin-top: 200px;
+    margin-bottom: 0;
+}
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.login-header {
+  padding: 20px;
+  font-size: 3em;
+  font-weight: normal;
+  text-align: center;
+  color: #fff;
+  text-shadow: 6px 6px 4px #0000005e;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+  box-shadow: 1px 1px 30px #00000082;
+}
+
+.login p {
+  padding: 40px 12px 12px 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+}
+
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+/* password focus effect */
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: rgb(53, 159, 173);
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: rgb(38, 115, 126);
+}
+
+/* Buttons' focus effect */
+.login input[type="submit"]:focus {
+  border-color: rgb(38, 115, 126);
+}

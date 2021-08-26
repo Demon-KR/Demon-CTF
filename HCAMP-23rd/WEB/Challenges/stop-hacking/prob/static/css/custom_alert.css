@@ -1,0 +1,19 @@
+.alert {
+    position:fixed;
+    padding: 5px 50px;
+    top: -100px;
+    left: 50px;
+    background-color:#444;
+    box-shadow: 1px 1px 10px #444;
+    border: none;
+    border-radius: 5px;
+    animation-name: alert;
+    animation-duration: 3s;
+}
+
+@keyframes alert {
+    0%   { top: -100px; }
+    10%  { top: 50px; }
+    90%  { top: 50px; }
+    100% { top: -100px; }
+}

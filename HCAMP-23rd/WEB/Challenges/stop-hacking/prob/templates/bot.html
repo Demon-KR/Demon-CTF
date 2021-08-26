@@ -1,0 +1,47 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Bot..</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+	<style>	
+	table {
+		margin : auto;
+		width : 56%;
+		margin-top : 18%;
+		margin-bottom : 18%;
+		margin-left : 23%;
+	}
+
+	#detect {
+		font-size:26px;
+	}
+	</style>
+</head>
+<body>
+	    	{% if botname != "" %}
+	<table>
+		<tr>
+			<td>
+				<div id="robot">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuIfP0vhhw0NL9pLYearxT4WXg5PgZR--zsQ&usqp=CAU" width="300">
+				<h2><b>봇이 탐지되었습니다</b></h2>
+				</div>
+			</td>
+			<td>
+				<div id="detect">
+					User-Agent : {{ useragent }}<br>
+					Bot Name : {{ botname }}<br>
+					<hr>
+					봇 데이터베이스 검색 결과 봇으로 탐지되었습니다.<br>
+					해당 서비스를 이용하실 수 없습니다. 
+				</div>
+				<br>
+			</td>
+		</tr>
+	</table>
+			{% endif %}
+
+</body>
+</html>
