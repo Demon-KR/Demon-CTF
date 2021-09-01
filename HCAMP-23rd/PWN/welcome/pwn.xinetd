@@ -1,0 +1,12 @@
+service welcome
+{
+    disable = no
+    socket_type = stream
+    protocol = tcp
+    wait = no 
+    user = pwn 
+    server = /home/pwn/welcome
+    type = UNLISTED
+    port = 8080
+}
+

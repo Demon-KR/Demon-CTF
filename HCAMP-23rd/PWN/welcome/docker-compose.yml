@@ -1,0 +1,9 @@
+version: '3'
+services:
+    challenge:
+        build: .
+        ports:
+            - "10002:8080"
+        command:
+            - /start.sh
+
